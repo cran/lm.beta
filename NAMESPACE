@@ -1,0 +1,4 @@
+exportPattern("^[[:alpha:]]+")
+S3method(print, lm.beta)
+S3method(summary, lm.beta)
+S3method(coef, lm.beta)

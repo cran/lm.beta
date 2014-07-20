@@ -1,0 +1,11 @@
+0f18117aace884adb913154e7e84a9d9 *DESCRIPTION
+9c01d836f0c65265709a38b0ccddb438 *NAMESPACE
+bc2c9c3fbd4f7fd66b12bae704bbff95 *R/coef.lm.beta.R
+a6d84639c8f908d9c13edb1a188441c2 *R/lm.beta.R
+5865abd9f41a907ddd501687691df081 *R/print.lm.beta.R
+1714f6f5323fc148f1d5fdf2c636e3fd *R/summary.lm.beta.R
+cf3d6c708d44980839510033865df905 *man/coef.lm.beta.Rd
+b73085f838dafb68ee88a14f471c7393 *man/lm.beta-package.Rd
+841d97c4f7587eb557d4f2ad49e70e44 *man/lm.beta.Rd
+75075645265c37bbce841d8929adb82e *man/print.lm.beta.Rd
+f916848b65bb5a8c23bc044767aaa2ae *man/summary.lm.beta.Rd
