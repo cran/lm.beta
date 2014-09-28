@@ -11,17 +11,17 @@ S3-method \code{coef} for object \code{lm.beta}.
 }
 \arguments{
   \item{object}{
-Object of class \code{lm.beta}.
+object of class \code{lm.beta}
 }
   \item{standardized}{
-Logical. Should the standardized values be returned?
+logical. Should the standardized values be returned?
 }
   \item{...}{
-Further arguments not implemented.
+additional arguments to pass to \code{print.default}
 }
 }
 \details{
-If \code{standardized=FALSE}, the standard \code{coef.lm}-method is called, else (standard value) the standardized regression coefficients are returned.
+If \code{standardized=FALSE}, the unstandardized regression coefficients are printed like if calling standard \code{coef.lm}-method, else (the standard value) the standardized regression coefficients are printed.
 }
 \value{
 Vector of (un)standardized regression coefficients.
@@ -42,6 +42,8 @@ trt <- c(4.81,4.17,4.41,3.59,5.87,3.83,6.03,4.89,4.32,4.69)
 group <- gl(2, 10, 20, labels = c("Ctl","Trt"))
 weight <- c(ctl, trt)
 lm.D9 <- lm(weight ~ group)
+
+# standardize
 lm.D9.beta <- lm.beta(lm.D9)
 coef(lm.D9.beta)
 coef(lm.D9.beta,standardized=FALSE)

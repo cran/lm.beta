@@ -1,0 +1,23 @@
+****************************************************************
+***           CHANGES IN LM.BETA PACKAGE VERSIONS            ***
+****************************************************************
+
+Stefan Behrendt
+mailto: r@behrendt-stefan.de
+url: www.behrendt-stefan.de/en/software/r/lm.beta.html
+
+****************************************************************
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Changes in Version 1.5
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ terms without intercept can be handled
++ all possible left-hand terms can be handled
++ coef.lm.beta extended by additional arguments passed through
++ generating the coefficient table in summary.lm.beta corrected
++ all help files are basically revised
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Version 1.0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+first release

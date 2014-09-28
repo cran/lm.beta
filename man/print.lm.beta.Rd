@@ -11,17 +11,17 @@ S3-method \code{print} for object \code{lm.beta}.
 }
 \arguments{
   \item{x}{
-Object of class \code{lm.beta}.
+object of class \code{lm.beta}
 }
   \item{standardized}{
-Logical. Should the standardized values be printed?
+logical. Should the standardized values be printed?
 }
   \item{\dots}{
-Additional arguments to pass to \code{print}.
+additional arguments to pass to \code{print.lm}
 }
 }
 \details{
-If \code{standardized=FALSE}, the standard \code{print.lm}-method is called, else (standard value) the regression coefficients are replaced by the standardized ones.
+If \code{standardized=FALSE}, the standard \code{print.lm}-method is called, else (the standard value) the regression coefficients are replaced by the standardized ones.
 
 The additional arguments are in case of \code{standardized=FALSE} passed to \code{print.lm}, else they are passed to \code{print} for classes \code{call} and \code{vector}.
 }
@@ -44,6 +44,8 @@ trt <- c(4.81,4.17,4.41,3.59,5.87,3.83,6.03,4.89,4.32,4.69)
 group <- gl(2, 10, 20, labels = c("Ctl","Trt"))
 weight <- c(ctl, trt)
 lm.D9 <- lm(weight ~ group)
+
+# standardize
 lm.D9.beta <- lm.beta(lm.D9)
 print(lm.D9.beta)
 print(lm.D9.beta,standardized=FALSE)

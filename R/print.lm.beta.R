@@ -6,9 +6,9 @@ print.lm.beta <- function(x, standardized=TRUE, ...) {
     print(x$standardized.coefficients,...)
     cat("\n")
   } else {
-    attr(x,"class") <- "lm"
-    print(x,...)
-    attr(x,"class") <- c("lm.beta","lm")
+    x.tmp <- x
+    attr(x.tmp,"class") <- "lm"
+    print(x.tmp,...)
   }
   invisible(x)
 }

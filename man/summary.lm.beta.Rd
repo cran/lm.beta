@@ -11,17 +11,17 @@ S3-method \code{summary} for object \code{lm.beta}.
 }
 \arguments{
   \item{object}{
-Object of class \code{lm.beta}.
+object of class \code{lm.beta}
 }
   \item{standardized}{
-Logical. Should the standardized values be integrated?
+logical. Should the standardized values be integrated?
 }
   \item{\dots}{
-Additional arguments to pass to \code{summary}.
+additional arguments to pass to \code{summary.lm}
 }
 }
 \details{
-If \code{standardized=FALSE}, the standard \code{summary.lm}-method is called, else (standard value) the standardized regression coefficients are added into the coefficient table.
+If \code{standardized=FALSE}, the standard \code{summary.lm}-method is called, else (the standard value) the standardized regression coefficients are added into the coefficient table.
 
 The additional arguments are passed to \code{summary.lm}.
 }
@@ -32,7 +32,7 @@ Adapted \code{\link{summary.lm}}-object.
 Stefan Behrendt, \email{r@behrendt-stefan.de}
 }
 \seealso{
-\code{\link{lm}} for creating the \code{lm}-object, \code{\link[lm.beta]{lm.beta}} for creating the demanded object and \code{\link{print.lm.beta}}, \code{\link{coef.lm.beta}} for other overwritten S3-methods.
+\code{\link{lm}} for creating the \code{lm}-object, \code{\link{summary.lm}} for basic summary-function, \code{\link[lm.beta]{lm.beta}} for creating the demanded object and \code{\link{print.lm.beta}}, \code{\link{coef.lm.beta}} for other overwritten S3-methods.
 }
 \examples{
 ## Taken from lm help
@@ -44,6 +44,8 @@ trt <- c(4.81,4.17,4.41,3.59,5.87,3.83,6.03,4.89,4.32,4.69)
 group <- gl(2, 10, 20, labels = c("Ctl","Trt"))
 weight <- c(ctl, trt)
 lm.D9 <- lm(weight ~ group)
+
+# standardize
 lm.D9.beta <- lm.beta(lm.D9)
 summary(lm.D9.beta)
 summary(lm.D9.beta,standardized=FALSE)
