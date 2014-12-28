@@ -16,15 +16,15 @@ object of class \code{lm.beta}
   \item{standardized}{
 logical. Should the standardized values be returned?
 }
-  \item{...}{
-additional arguments to pass to \code{print.default}
+  \item{\dots}{
+additional arguments. Not used.
 }
 }
 \details{
 If \code{standardized=FALSE}, the unstandardized regression coefficients are printed like if calling standard \code{coef.lm}-method, else (the standard value) the standardized regression coefficients are printed.
 }
 \value{
-Vector of (un)standardized regression coefficients.
+named numeric Vector of (un)standardized regression coefficients.
 }
 \author{
 Stefan Behrendt, \email{r@behrendt-stefan.de}

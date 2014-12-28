@@ -1,7 +1,8 @@
 coef.lm.beta <- function(object, standardized=TRUE, ...) {
   if(standardized) {
-    print(object$standardized.coefficients,...)
+    res <- object$standardized.coefficients
   } else {
-    print(object$coefficients,...)
+    res <- object$coefficients
   }
+  res
 }

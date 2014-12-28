@@ -26,7 +26,7 @@ If \code{standardized=FALSE}, the standard \code{summary.lm}-method is called, e
 The additional arguments are passed to \code{summary.lm}.
 }
 \value{
-Adapted \code{\link{summary.lm}}-object.
+Adapted \code{\link{summary.lm}}-object, in case of \code{standardized=TRUE} with additional class \code{summary.lm.beta}.
 }
 \author{
 Stefan Behrendt, \email{r@behrendt-stefan.de}

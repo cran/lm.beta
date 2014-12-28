@@ -9,6 +9,14 @@ url: www.behrendt-stefan.de/en/software/r/lm.beta.html
 ****************************************************************
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Changes in Version 1.5-1
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ bug fixes belonging to problem of printing the standardized
+  coefficients in front of the output of summary- and, in some
+  cases, coef-function are implemented
++ depending help files are revised
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Changes in Version 1.5
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + terms without intercept can be handled

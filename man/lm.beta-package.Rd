@@ -21,8 +21,8 @@ Package \code{lm.beta} standardizes all coefficients disregarding the use in int
 \tabular{ll}{
 Package: \tab lm.beta\cr
 Type: \tab Package\cr
-Version: \tab 1.5\cr
-Date: \tab 2014-09-28\cr
+Version: \tab 1.5-1\cr
+Date: \tab 2014-12-28\cr
 License: \tab GPL(>=2)\cr
 }
 }
