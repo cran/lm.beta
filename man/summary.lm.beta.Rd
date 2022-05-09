@@ -1,7 +1,7 @@
 \name{summary.lm.beta}
 \alias{summary.lm.beta}
 \title{
-Summarize \code{lm.beta}-object
+Summarize \code{lm.beta}-Object
 }
 \description{
 S3-method \code{summary} for object \code{lm.beta}.
@@ -32,7 +32,7 @@ Adapted \code{\link{summary.lm}}-object, in case of \code{standardized=TRUE} wit
 Stefan Behrendt, \email{r@behrendt-stefan.de}
 }
 \seealso{
-\code{\link{lm}} for creating the \code{lm}-object, \code{\link{summary.lm}} for basic summary-function, \code{\link[lm.beta]{lm.beta}} for creating the demanded object and \code{\link{print.lm.beta}}, \code{\link{coef.lm.beta}} for other overwritten S3-methods.
+\code{\link{lm.beta}} for creating the \code{lm.beta}-object.
 }
 \examples{
 ## Taken from lm help

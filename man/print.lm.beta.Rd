@@ -1,7 +1,7 @@
 \name{print.lm.beta}
 \alias{print.lm.beta}
 \title{
-Print \code{lm.beta}-object
+Print \code{lm.beta}-Object
 }
 \description{
 S3-method \code{print} for object \code{lm.beta}.
@@ -32,7 +32,7 @@ Original object.
 Stefan Behrendt, \email{r@behrendt-stefan.de}
 }
 \seealso{
-\code{\link{lm}} for creating the \code{lm}-object, \code{\link[lm.beta]{lm.beta}} for creating the demanded object and \code{\link{summary.lm.beta}}, \code{\link{coef.lm.beta}} for other overwritten S3-methods.
+\code{\link{lm.beta}} for creating the \code{lm.beta}-object.
 }
 \examples{
 ## Taken from lm help

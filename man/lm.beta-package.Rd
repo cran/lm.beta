@@ -13,7 +13,7 @@ Please regard:
 
 Package \code{lm.beta} works in the way of common statistical softwares like SPSS by standardizing the coefficients after estimating them using the standard deviations or similar measures of the used variables. So there are unstandardized and standardized coefficients available simultaneously.
 
-Standardizing before estimating is not (yet) available in this package, but by using the command \code{scale} you can do this by using basic commands. Hereby please regard that the option \code{center} influences the way of interpretation of the intercept. 
+Standardizing before estimating is not (yet) available in this package, but by using the command \code{scale} you can do this by using basic commands. Hereby please regard that the option \code{center} influences the way of interpretation of the intercept.
 
 Package \code{lm.beta} standardizes all coefficients disregarding the use in interpretation. In this version, all types of scales of the variables (metrical, categorical, ...), all types of contrasts, interaction effects and additional terms on both sides of the formula can be handled if \code{lm} can handle them. The sensitive use in interpretation has to be regarded by the user.
 }
@@ -21,8 +21,8 @@ Package \code{lm.beta} standardizes all coefficients disregarding the use in int
 \tabular{ll}{
 Package: \tab lm.beta\cr
 Type: \tab Package\cr
-Version: \tab 1.5-1\cr
-Date: \tab 2014-12-28\cr
+Version: \tab 1.6-1\cr
+Date: \tab 2018-06-20\cr
 License: \tab GPL(>=2)\cr
 }
 }

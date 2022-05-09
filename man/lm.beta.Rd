@@ -1,27 +1,34 @@
 \name{lm.beta}
 \alias{lm.beta}
 \title{
-Add standardized regression coefficients to \code{lm}-objects
+Add Standardized Regression Coefficients to \code{lm}-Objects
 }
 \description{
 Adds standardized regression coefficients to objects created by \code{\link{lm}}.
 }
 \usage{
-lm.beta(object)
+lm.beta(object, complete.standardization = FALSE)
 }
 \arguments{
   \item{object}{
     object of type \code{lm}
-}
+  }
+  \item{complete.standardization}{
+    logical. See Details.
+  }
 }
 \details{
 Calculates the standardized regression coefficients by common method used for example in SPSS. For translating the formula, functions \code{\link{model.matrix}} (for the right-hand side) and \code{\link{model.frame}} (for the left-hand side) are used, so all options saved in the \code{\link{lm}}-object are supported.
+
+In the case of models with intercept, the standardization results in the same estimates as \code{lm(..., data = scale(data))}.
+
+In the case of models without intercept, there are two different types of standardization available. (1) Complete standardization (\code{complete.standardization = TRUE}) results in the same estimates as \code{lm(..., data = scale(data))} and therefore results in the same estimates as the same model with intercept. (2) Incomplete standardization (\code{complete.standardization = FALSE}, the standard value) results in the same estimates as \code{lm(..., data = scale(data, center = FALSE))}. This estimation is implemented in IBM SPSS Statistics. For a theoretical justification see \emph{Eisenhauer 2003}.
 
 Please regard:
 
 Package \code{lm.beta} standardizes the coefficients after estimating them using the standard deviations or similar measures of the used variables. So there are unstandardized and standardized coefficients available simultaneously.
 
-Standardizing before estimating is not (yet) available in this package, but by using the command \code{scale} you can do this by using basic commands. Hereby please regard that the option \code{center} influences the way of interpretation of the intercept. 
+Standardizing before estimating is not (yet) available in this package, but by using the function \code{scale} you can do this by using basic commands. Hereby please regard that the option \code{center} influences the way of interpretation of the intercept.
 
 Package \code{lm.beta} standardizes all coefficients disregarding the use in interpretation. In this version, all types of scales of the variables (metrical, categorical, ...), all types of contrasts, interaction effects and additional terms on both sides of the formula can be handled if \code{lm} can handle them. The sensitive use in interpretation has to be regarded by the user.
 }
@@ -32,7 +39,9 @@ A list of class \code{lm.beta} like a \code{\link{lm}}-object extended by
 }
 }
 \references{
-Urban, D., Mayerl, J., Sackmann, R. (Hrsg.) \emph{Regressionsanalyse : Theorie, Technik und Anwendung}, VS-Verlag, 4. Aufl.
+Eisenhauer, J.G. (2003). Regression through the Origin. In \emph{Teching Statistics}, 25(3).
+
+Urban, D., Mayerl, J., Sackmann, R. (Hrsg.) \emph{Regressionsanalyse : Theorie, Technik und Anwendung}. VS-Verlag, 4th ed.
 
 Vittinghoff, E. et al (2005) \emph{Regression methods in biostatistics: Linear, logistic, survival, and repeated measures models}, Springer, p 75
 }
@@ -44,7 +53,7 @@ Some S3 methods, where standardized coefficients mind, are extended, the others 
 }
 
 \seealso{
-\code{\link{lm}} for creating the demanded object and \code{\link{print.lm.beta}}, \code{\link{summary.lm.beta}}, \code{\link{coef.lm.beta}} for extended S3-methods.
+\code{\link{lm}} for creating the demanded object and \code{\link{print.lm.beta}}, \code{\link{summary.lm.beta}} and \code{\link{coef.lm.beta}} for extended S3-methods.
 }
 \examples{
 ## Taken from lm help

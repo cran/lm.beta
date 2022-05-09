@@ -9,6 +9,16 @@ url: www.behrendt-stefan.de/en/software/r/lm.beta.html
 ****************************************************************
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Changes in Version 1.6-2
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ added a second type of standardization (argument complete.sta-
+  ndardization) for models without intercept
+
++ changed 'standardized intercept' from '0' to 'NA'
++ package vignette 'implementation' added
++ depending help files are revised
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Changes in Version 1.5-1
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + bug fixes belonging to problem of printing the standardized

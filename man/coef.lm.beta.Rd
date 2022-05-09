@@ -1,7 +1,7 @@
 \name{coef.lm.beta}
 \alias{coef.lm.beta}
 \title{
-Print coefficients of \code{lm.beta}-object
+Print Coefficients of \code{lm.beta}-Object
 }
 \description{
 S3-method \code{coef} for object \code{lm.beta}.
@@ -30,7 +30,7 @@ named numeric Vector of (un)standardized regression coefficients.
 Stefan Behrendt, \email{r@behrendt-stefan.de}
 }
 \seealso{
-\code{\link{lm}} for creating the \code{lm}-object, \code{\link[lm.beta]{lm.beta}} for creating the demanded object and \code{\link{print.lm.beta}}, \code{\link{summary.lm.beta}} for other overwritten S3-methods.
+\code{\link{lm.beta}} for creating the \code{lm.beta}-object.
 }
 \examples{
 ## Taken from lm help
