@@ -1,7 +1,7 @@
 \name{lm.beta}
 \alias{lm.beta}
 \title{
-Add Standardized Regression Coefficients to \code{lm}-Objects
+Add Standardized Regression Coefficients to Linear-Model-Objects
 }
 \description{
 Adds standardized regression coefficients to objects created by \code{\link{lm}}.
@@ -10,15 +10,11 @@ Adds standardized regression coefficients to objects created by \code{\link{lm}}
 lm.beta(object, complete.standardization = FALSE)
 }
 \arguments{
-  \item{object}{
-    object of type \code{lm}
-  }
-  \item{complete.standardization}{
-    logical. See Details.
-  }
+  \item{object}{An \R object of type \code{lm}}
+  \item{complete.standardization}{Logical. (See Details.)}
 }
 \details{
-Calculates the standardized regression coefficients by common method used for example in SPSS. For translating the formula, functions \code{\link{model.matrix}} (for the right-hand side) and \code{\link{model.frame}} (for the left-hand side) are used, so all options saved in the \code{\link{lm}}-object are supported.
+Calculates the standardized regression coefficients by common method used for example in SPSS. For translating the formula, functions \code{\link{model.matrix}} (for the right-hand side) and \code{\link{model.frame}} (for the left-hand side) are used. Additionally the case weights are regarded. So all options saved in the \code{\link{lm}}-object are supported.
 
 In the case of models with intercept, the standardization results in the same estimates as \code{lm(..., data = scale(data))}.
 
@@ -53,7 +49,7 @@ Some S3 methods, where standardized coefficients mind, are extended, the others 
 }
 
 \seealso{
-\code{\link{lm}} for creating the demanded object and \code{\link{print.lm.beta}}, \code{\link{summary.lm.beta}} and \code{\link{coef.lm.beta}} for extended S3-methods.
+\code{\link{lm}} for creating the demanded object and \code{\link{print.lm.beta}}, \code{\link{summary.lm.beta}} and \code{\link{coef.lm.beta}} as well as \code{\link{xtable.lm.beta}} for extended S3-methods.
 }
 \examples{
 ## Taken from lm help
@@ -71,6 +67,7 @@ lm.D9.beta <- lm.beta(lm.D9)
 print(lm.D9.beta)
 summary(lm.D9.beta)
 coef(lm.D9.beta)
+xtable::xtable(lm.D9.beta)
 }
 \keyword{lm}
 \keyword{beta}

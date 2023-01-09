@@ -1,7 +1,7 @@
 \name{print.lm.beta}
 \alias{print.lm.beta}
 \title{
-Print \code{lm.beta}-Object
+Print Standardized Linear-Model-Object
 }
 \description{
 S3-method \code{print} for object \code{lm.beta}.
@@ -10,15 +10,9 @@ S3-method \code{print} for object \code{lm.beta}.
 \S3method{print}{lm.beta}(x, standardized = TRUE, ...)
 }
 \arguments{
-  \item{x}{
-object of class \code{lm.beta}
-}
-  \item{standardized}{
-logical. Should the standardized values be printed?
-}
-  \item{\dots}{
-additional arguments to pass to \code{print.lm}
-}
+  \item{x}{An \R object of class \code{lm.beta}}
+  \item{standardized}{Logical. Should the standardized values be printed?}
+  \item{\dots}{Additional arguments to pass to \code{print.lm}}
 }
 \details{
 If \code{standardized=FALSE}, the standard \code{print.lm}-method is called, else (the standard value) the regression coefficients are replaced by the standardized ones.

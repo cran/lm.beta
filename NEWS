@@ -4,15 +4,23 @@
 
 Stefan Behrendt
 mailto: r@behrendt-stefan.de
-url: www.behrendt-stefan.de/en/software/r/lm.beta.html
 
 ****************************************************************
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Changes in Version 1.7-1
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ fixed the support of weighted cases
++ added the enhancement to xtable
+
++ base code is revised to guarantee simplier understanding
++ depending help files are revised
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Changes in Version 1.6-2
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ added a second type of standardization (argument complete.sta-
-  ndardization) for models without intercept
++ added a second type of standardization (argument
+  complete.standardization) for models without intercept
 
 + changed 'standardized intercept' from '0' to 'NA'
 + package vignette 'implementation' added
@@ -38,4 +46,4 @@ Changes in Version 1.5
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Version 1.0
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-first release
++ first release

@@ -1,7 +1,7 @@
 \name{summary.lm.beta}
 \alias{summary.lm.beta}
 \title{
-Summarize \code{lm.beta}-Object
+Summarize Standardized Linear-Model-Object
 }
 \description{
 S3-method \code{summary} for object \code{lm.beta}.
@@ -10,15 +10,9 @@ S3-method \code{summary} for object \code{lm.beta}.
 \S3method{summary}{lm.beta}(object, standardized = TRUE, ...)
 }
 \arguments{
-  \item{object}{
-object of class \code{lm.beta}
-}
-  \item{standardized}{
-logical. Should the standardized values be integrated?
-}
-  \item{\dots}{
-additional arguments to pass to \code{summary.lm}
-}
+  \item{object}{An \R object of class \code{lm.beta}}
+  \item{standardized}{Logical. Should the standardized values be integrated?}
+  \item{\dots}{Additional arguments to pass to \code{summary.lm}}
 }
 \details{
 If \code{standardized=FALSE}, the standard \code{summary.lm}-method is called, else (the standard value) the standardized regression coefficients are added into the coefficient table.

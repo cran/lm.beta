@@ -1,7 +1,7 @@
 \name{coef.lm.beta}
 \alias{coef.lm.beta}
 \title{
-Print Coefficients of \code{lm.beta}-Object
+Print Coefficients of Standardized Linear-Model-Object
 }
 \description{
 S3-method \code{coef} for object \code{lm.beta}.
@@ -10,15 +10,9 @@ S3-method \code{coef} for object \code{lm.beta}.
 \S3method{coef}{lm.beta}(object, standardized = TRUE, ...)
 }
 \arguments{
-  \item{object}{
-object of class \code{lm.beta}
-}
-  \item{standardized}{
-logical. Should the standardized values be returned?
-}
-  \item{\dots}{
-additional arguments. Not used.
-}
+  \item{object}{An \R object of class \code{lm.beta}}
+  \item{standardized}{Logical. Should the standardized values be returned?}
+  \item{\dots}{additional arguments. (Currently ignored.)}
 }
 \details{
 If \code{standardized=FALSE}, the unstandardized regression coefficients are printed like if calling standard \code{coef.lm}-method, else (the standard value) the standardized regression coefficients are printed.

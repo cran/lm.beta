@@ -14,7 +14,7 @@
 
 \author{Stefan Behrendt}
 \title{Implementation of \texttt{lm.beta}}
-\date{July 22, 2018}
+\date{January 01, 2023}
 
 \parindent0pt
 \parskip 10pt plus 1pt minus 1pt
@@ -25,8 +25,18 @@
 The package \texttt{lm.beta} is based on equation (\ref{fct:impl}) to estimate the standardized regression coefficients.
 
 \begin{equation}\label{fct:impl}
-\hat{\beta}_i = \hat{b}_i \cdot \dfrac{\sqrt{\sum_j (X_{i,j} - \overline{X_i} \cdot I)^2}}{\sqrt{\sum_j (Y_j - \overline{Y} \cdot I)^2}}
+\hat{\beta}_i = \hat{b}_i \cdot \dfrac{s(X_i)}{s(Y)}
 \end{equation}
+
+using
+
+\begin{equation*}
+s(A) = \sqrt{\dfrac{\sum_j w_j\cdot (A_j - m(A) \cdot I)^2}{(n_w - 1) / n_w \cdot\sum_j w_j}}
+\end{equation*}
+
+\begin{equation*}
+m(A) = \dfrac{\sum_j w_j\cdot A_j}{\sum_j w_j}
+\end{equation*}
 
 with
 \begin{itemize}
@@ -38,11 +48,13 @@ with
 \item[*] IBM\textsuperscript{\textregistered} SPSS Statistics\textsuperscript{\textregistered}, e.g., always uses $I=0$ for models without intercept
 \item[*] see e.g. \url{https://online.stat.psu.edu/~ajw13/stat501/SpecialTopics/Reg_thru_origin.pdf}\footnote{Eisenhauer J.G. (2003). Regression through the Origin. \textit{Teaching Statistics}, 25(3), p. 76-80.} for further information on which $I$ to choose
 \end{itemize}
-\item $\overline{A}$ the arithmetic mean of $A$
 \item $Y$ the dependent variable
 \item $X_i$ the $i$-th independent variable
+\item $w$ the case weights
+\item $n_w$ the number of non-zero weights
 \end{itemize}
 
+\clearpage
 A simplification for $I=1$ is shown in equation (\ref{fct:i}) and for $I=0$ in equation (\ref{fct:ii}).
 
 \begin{equation}\label{fct:i}
@@ -60,6 +72,20 @@ with (additionally to above)
 \begin{itemize}
 \item[*] The sample size---and the different methods for correcting it---doesn't have to be considered when estimating the moments, because the factors would be similar in numerater and denominater, and therefore would be reduced.
 \end{itemize}
+\end{itemize}
+
+Simplifications of non-weighted cases are
+\begin{equation*}
+s(A) = \sqrt{\dfrac{\sum_j (A_j - m(A) \cdot I)^2}{n - 1}}
+\end{equation*}
+
+\begin{equation*}
+m(A) = \dfrac{\sum_j A_j}{n}
+\end{equation*}
+
+with (additionally to above)
+\begin{itemize}
+\item $n$ the number of non-empty cases
 \end{itemize}
 
 \end{document}
