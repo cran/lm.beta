@@ -1,7 +1,7 @@
-xtable.lm.beta <- function(x, standardized = TRUE, caption = NULL, label = NULL,
+xtable.lm.beta <- function(x, caption = NULL, label = NULL,
                            align = NULL, digits = NULL, display = NULL,
                            auto = FALSE, ...) {
-  return(xtable.summary.lm.beta(summary(x, standardized = standardized),
+  return(xtable.summary.lm.beta(summary(x, standardized = TRUE),
                                 caption = caption, label = label, align = align,
                                 digits = digits, display = display, auto = auto,
                                 ...))

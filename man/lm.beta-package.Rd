@@ -7,7 +7,7 @@ Add Standardized Regression Coefficients to \code{lm}-Objects
 \description{
 Adds standardized regression coefficients to objects created by \code{\link{lm}}.
 
-Also extends the S3 methods \code{print}, \code{summary} and \code{coef} with additional boolean argument standardized.
+Also extends the S3 methods \code{print}, \code{summary} and \code{coef} with additional boolean argument standardized and provides \code{xtable}-support.
 
 Please regard:
 
@@ -21,9 +21,9 @@ Package \code{lm.beta} standardizes all coefficients disregarding the use in int
 \tabular{ll}{
 Package: \tab lm.beta\cr
 Type: \tab Package\cr
-Version: \tab 1.6-1\cr
-Date: \tab 2018-06-20\cr
-License: \tab GPL(>=2)\cr
+Version: \tab 1.7-2\cr
+Date: \tab 2023-03-12\cr
+License: \tab GPL(>=3)\cr
 }
 }
 \author{
@@ -54,4 +54,5 @@ lm.D9.beta <- lm.beta(lm.D9)
 print(lm.D9.beta)
 summary(lm.D9.beta)
 coef(lm.D9.beta)
+xtable::xtable(lm.D9.beta)
 }
